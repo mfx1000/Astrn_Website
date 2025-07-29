@@ -1,11 +1,11 @@
-import { Brain, Cpu, Network } from "lucide-react";
+import { Brain, Car, Cpu, Network } from "lucide-react";
 
 export default function ApplicationsSection() {
   const applications = [
     {
       icon: Brain,
-      title: "Multi-Modal Foundation Models",
-      description: "Feed vision and audio into foundation models with verified, rights-cleared synthetic data for comprehensive AI training.",
+      title: "Multi-Modal Pre-Training",
+      description: "Feed vision and audio into foundation models with scalable synthetic data",
       borderColor: "hover:border-astrian-teal/30",
       iconColor: "text-astrian-teal"
     },
@@ -17,9 +17,9 @@ export default function ApplicationsSection() {
       iconColor: "text-astrian-blue"
     },
     {
-      icon: Network,
-      title: "Autonomous Systems",
-      description: "Capture edge-case behavioral data including night conditions, weather variations, and multi-agent interactions.",
+      icon: Car,
+      title: "Autonomous Vehicles",
+      description: "Replicate the full spectrum of driving conditions, from night-time navigation to extreme weather scenarios and multi-agent environments.",
       borderColor: "hover:border-astrian-teal/30",
       iconColor: "text-astrian-teal"
     }

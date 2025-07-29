@@ -11,17 +11,19 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
-                The Training Data Engine for 
-                <span className="gradient-text"> Physical Intelligence</span>
+                Synthetic Data At Scale For 
+                <span className="gradient-text"> Physical AI</span>
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Building the world's first Neural Trajectory Factory - generating infinite, high-quality training data for physical AI systems through breakthrough neural trajectory synthesis.
+                Build with synthetic, high-quality training data for robotics, multi-modal agents and more.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="mailto:investors@astrian.ai" 
+                href="https://tally.so/r/mJvMNJ"
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="gradient-bg text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all duration-300 text-center font-medium"
               >
                 Get in Touch

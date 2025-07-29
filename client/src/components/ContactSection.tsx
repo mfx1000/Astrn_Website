@@ -11,7 +11,9 @@ export default function ContactSection() {
           </p>
           <div className="flex justify-center">
             <a 
-              href="mailto:investors@astrian.ai" 
+              href="https://tally.so/r/mJvMNJ" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="gradient-bg text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all duration-300 font-medium"
             >
               Get in Touch

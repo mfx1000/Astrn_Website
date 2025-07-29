@@ -54,7 +54,9 @@ export default function Navigation() {
               Applications
             </button>
             <a 
-              href="mailto:contact@astrian.ai" 
+              href="https://tally.so/r/mJvMNJ"
+              target="_blank" 
+              rel="noopener noreferrer"
               className="gradient-bg text-white px-5 py-2 rounded-full hover:opacity-90 transition-opacity duration-300 text-sm font-medium"
             >
               Get in Touch
@@ -95,7 +97,9 @@ export default function Navigation() {
                 Applications
               </button>
               <a 
-                href="mailto:contact@astrian.ai" 
+                href="https://tally.so/r/mJvMNJ" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="block gradient-bg text-white px-5 py-2 rounded-full hover:opacity-90 transition-opacity duration-300 text-center text-sm font-medium"
               >
                 Get in Touch

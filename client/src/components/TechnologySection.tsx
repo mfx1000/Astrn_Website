@@ -9,13 +9,13 @@ export default function TechnologySection() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl lg:text-3xl font-bold gradient-text">
-                Neural Trajectory Synthesis
+                Augmenting synthetic video data at scale from a small set of real-world videos
               </h3>
-              <h4 className="text-lg text-gray-300 font-medium">
+              {/* <h4 className="text-lg text-gray-300 font-medium">
                 The First Technology to Generate Infinite Photorealistic Robot Interaction Data
-              </h4>
+              </h4> */}
               <p className="text-gray-400 leading-relaxed">
-                Our proprietary Physics-Aware Video Foundation Model generates pixel-perfect robot interaction videos from single frames, understanding complex physics like liquids, deformation, and contact dynamics that traditional simulation can't capture.
+                Our proprietary Video Foundation Model generates accurate robot interaction videos and the neural trajectory data, understanding complex physics like liquids, deformation, and contact dynamics to generate high quality training data at scale that beats traditional data collection approaches.
               </p>
             </div>
             
