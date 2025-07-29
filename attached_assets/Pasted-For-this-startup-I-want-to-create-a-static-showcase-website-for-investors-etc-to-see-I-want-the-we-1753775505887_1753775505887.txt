@@ -1,0 +1,28 @@
+For this startup I want to create a static showcase website for investors etc. to see. I want the website design to use the color scheme from the logo I have attached. Also when creating the website, use a font similar to the one in the logo image to replicate it as close to possible along with the color gradient to match the logo as close as possible. 
+
+Also I saw this company genesis having this grainy type unique design attached in the 2nd image, and I think it looks really cool. Can you take inspiration from it to create a unique background design that also screams innovative, disruptive, unique and take the color inspiration from my logo. 
+
+For the structure of the website, I want a single page website, and on the homepage I want the standard structure to showcase and talk about my startup with a bold vision line of the left and on the right I will have a video that will showcase a robot training video to demonstrate learning of a robot in unseen environments.
+
+then under that section create a new section to give some specfic detail about the tech or vision so that the website looks full.
+
+Then create a section like the one shown in image 4 for giving a bold line about the tech, then some specific detail about the project under it for better clarity. Then under it create tiles similar to the one shown in image 4 to showcase the industries in which out technology has applications in, along with creating or using some abstract icon or image similar to the ones in the image, to highlight the industry applications with the icon. Now poseidon's website section in image 4 is showing the following industry applications (
+
+Humanoid Robotics
+Train manipulation tasks with first-person video across diverse real-world environments
+
+Audio Transcription
+High-fidelity voice and soundscape data for grounding voice models
+
+Autonomous Vehicles
+Capture edge-case driving data: night, weather, rural, multi-agent
+
+Multi-Modal Pre-Training
+Feed vision and audio into foundation models with verified, rights-cleared data
+)
+
+I want you to take inspiration from these to create the industry application section such that it doesn't look plagiarized and copied.  But for our website, include "multi-modal pre-training", "humanoid robotics", "autonomous vehicles" , just try changing the language or something to avoid plagiarism.
+
+Just take these details to create a unique well designed responsive (for phone and pc) static website. And similar to the poseidon homepage pitcture I have attached at last, include a get in touch button under the main heading that will just be a mailto: button and similar to the navigation bar create one with like them matching our color scheme, that is non sticky. It should contain the logo at the left, and the right should contain an about section link that is basically selected by default for the homepage, and next to it a Get in touch button that performs the same mailto action . 
+
+Don't overcomplicate the website, I just want a good looking responsive,,well designed static website to showcase my vision and idea to people and investors.
