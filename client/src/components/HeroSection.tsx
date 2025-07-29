@@ -29,18 +29,19 @@ export default function HeroSection() {
             </div>
           </div>
           
-          {/* Right Content - Video Placeholder */}
+          {/* Right Content - Robot Training Video */}
           <div className="relative">
-            <div className="aspect-video bg-gradient-to-br from-astrian-teal/20 to-astrian-blue/20 rounded-2xl border border-white/10 flex items-center justify-center backdrop-blur-sm">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto gradient-bg rounded-full flex items-center justify-center animate-pulse-soft">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M19 19H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2z"></path>
-                  </svg>
-                </div>
-                <p className="text-gray-400 font-medium">Robot Training Demo Video</p>
-                <p className="text-sm text-gray-500">Neural trajectory learning in unseen environments</p>
-              </div>
+            <div className="aspect-video rounded-2xl border border-white/10 overflow-hidden">
+              <video 
+                className="w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="https://qxikapaxhmoiouxagyly.supabase.co/storage/v1/object/public/astrian-asset//robotics%20learning%20showcase.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
