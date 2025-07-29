@@ -12,13 +12,13 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="mailto:investors@astrian.ai" 
-              className="gradient-bg text-white px-8 py-3 rounded-full hover:opacity-90 transition-all duration-300 font-medium"
+              className="gradient-bg text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all duration-300 font-medium"
             >
               Contact Investors Team
             </a>
             <a 
               href="mailto:partnerships@astrian.ai" 
-              className="border border-white/20 text-white px-8 py-3 rounded-full hover:border-astrian-teal/50 transition-all duration-300 font-medium"
+              className="border border-white/20 text-white px-6 py-2.5 rounded-full hover:border-astrian-teal/50 transition-all duration-300 font-medium"
             >
               Partnership Inquiries
             </a>

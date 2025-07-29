@@ -1,24 +1,27 @@
-import { Monitor, User, Zap } from "lucide-react";
+import { Brain, Cpu, Network } from "lucide-react";
 
 export default function ApplicationsSection() {
   const applications = [
     {
-      icon: Monitor,
+      icon: Brain,
       title: "Multi-Modal Foundation Models",
       description: "Feed vision and audio into foundation models with verified, rights-cleared synthetic data for comprehensive AI training.",
-      borderColor: "hover:border-astrian-teal/50"
+      borderColor: "hover:border-astrian-teal/30",
+      iconColor: "text-astrian-teal"
     },
     {
-      icon: User,
+      icon: Cpu,
       title: "Humanoid Robotics", 
       description: "Train complex manipulation tasks with first-person video data across diverse real-world environments and scenarios.",
-      borderColor: "hover:border-astrian-blue/50"
+      borderColor: "hover:border-astrian-blue/30",
+      iconColor: "text-astrian-blue"
     },
     {
-      icon: Zap,
+      icon: Network,
       title: "Autonomous Systems",
       description: "Capture edge-case behavioral data including night conditions, weather variations, and multi-agent interactions.",
-      borderColor: "hover:border-astrian-teal/50"
+      borderColor: "hover:border-astrian-teal/30",
+      iconColor: "text-astrian-teal"
     }
   ];
 
@@ -40,13 +43,13 @@ export default function ApplicationsSection() {
             return (
               <div 
                 key={index}
-                className={`bg-white/5 border border-white/10 rounded-2xl p-8 ${app.borderColor} transition-all duration-300 group`}
+                className={`bg-white/3 border border-white/10 rounded-2xl p-8 ${app.borderColor} transition-all duration-300 group hover:bg-white/5`}
               >
-                <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <IconComponent className="w-6 h-6 text-white" />
+                <div className="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:scale-105 transition-all duration-300 border border-white/10">
+                  <IconComponent className={`w-7 h-7 ${app.iconColor}`} />
                 </div>
-                <h4 className="text-xl font-semibold mb-4">{app.title}</h4>
-                <p className="text-gray-400">{app.description}</p>
+                <h4 className="text-xl font-semibold mb-4 text-white">{app.title}</h4>
+                <p className="text-gray-400 leading-relaxed">{app.description}</p>
               </div>
             );
           })}

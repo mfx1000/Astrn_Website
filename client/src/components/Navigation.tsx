@@ -55,7 +55,7 @@ export default function Navigation() {
             </button>
             <a 
               href="mailto:contact@astrian.ai" 
-              className="gradient-bg text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity duration-300"
+              className="gradient-bg text-white px-5 py-2 rounded-full hover:opacity-90 transition-opacity duration-300 text-sm font-medium"
             >
               Get in Touch
             </a>
@@ -96,7 +96,7 @@ export default function Navigation() {
               </button>
               <a 
                 href="mailto:contact@astrian.ai" 
-                className="block gradient-bg text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity duration-300 text-center"
+                className="block gradient-bg text-white px-5 py-2 rounded-full hover:opacity-90 transition-opacity duration-300 text-center text-sm font-medium"
               >
                 Get in Touch
               </a>
