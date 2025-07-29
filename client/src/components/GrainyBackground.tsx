@@ -27,19 +27,19 @@ export default function GrainyBackground() {
       for (let i = 0; i < data.length; i += 4) {
         // Create noise pattern
         const noise = Math.random();
-        const grain = Math.random() > 0.95 ? 255 : 0;
+        const grain = Math.random() > 0.92 ? 255 : 0;
         
-        // Base color (very dark)
-        const baseColor = 5 + Math.random() * 10;
+        // Base color (more visible)
+        const baseColor = 15 + Math.random() * 25;
         
         // Add teal/blue tints randomly
         const r = baseColor + (Math.random() > 0.98 ? noise * 20 : 0);
         const g = baseColor + (Math.random() > 0.97 ? noise * 40 : 0);
         const b = baseColor + (Math.random() > 0.96 ? noise * 60 : 0);
         
-        data[i] = Math.min(255, r + grain * 0.1);     // Red
-        data[i + 1] = Math.min(255, g + grain * 0.2); // Green  
-        data[i + 2] = Math.min(255, b + grain * 0.3); // Blue
+        data[i] = Math.min(255, r + grain * 0.3);     // Red
+        data[i + 1] = Math.min(255, g + grain * 0.4); // Green  
+        data[i + 2] = Math.min(255, b + grain * 0.5); // Blue
         data[i + 3] = 255; // Alpha
       }
 
