@@ -14,18 +14,20 @@ export default function ASCIIIntelligence() {
     canvas.width = 400;
     canvas.height = 400;
 
-    // ASCII characters representing different aspects of intelligence
+    // Sophisticated ASCII patterns representing intelligence layers
     const intelligenceChars = [
-      // Neural patterns
-      '●', '○', '◐', '◑', '◒', '◓',
-      // Flow patterns  
-      '∞', '∿', '〜', '⟡', '⟢',
-      // Connection patterns
-      '◊', '◈', '▲', '▼', '◆',
-      // Consciousness symbols
-      '※', '∴', '∵', '⊕', '⊗',
-      // Data flow
-      '▣', '▢', '⬢', '⬡', '⟨', '⟩'
+      // Core thinking patterns
+      '◯', '◉', '⦿', '⊙', '⊚', '⊛',
+      // Neural networks
+      '⊗', '⊕', '⊡', '⊟', '⊞', '⊠',
+      // Data processing
+      '⟐', '⟑', '⟒', '⟓', '⟔', '⟕',
+      // Information flow
+      '⧆', '⧇', '⧈', '⧉', '⧊', '⧋',
+      // Consciousness emergence
+      '◈', '◇', '◆', '◊', '⬟', '⬠',
+      // Binary thought
+      '▣', '▢', '▥', '▦', '▧', '▨'
     ];
 
     // Intelligence patterns that morph and flow
@@ -41,21 +43,21 @@ export default function ASCIIIntelligence() {
       waveOffset: number;
     }> = [];
 
-    // Initialize patterns
-    for (let i = 0; i < 60; i++) {
+    // Initialize patterns with monochromatic white/grey palette
+    for (let i = 0; i < 50; i++) {
       patterns.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         char: intelligenceChars[Math.floor(Math.random() * intelligenceChars.length)],
         phase: Math.random() * Math.PI * 2,
-        speed: 0.02 + Math.random() * 0.03,
-        size: 12 + Math.random() * 16,
+        speed: 0.015 + Math.random() * 0.025,
+        size: 10 + Math.random() * 14,
         color: {
-          r: Math.random() < 0.5 ? 0 : 20,
-          g: 180 + Math.random() * 75,
-          b: 150 + Math.random() * 105
+          r: 220 + Math.random() * 35,
+          g: 220 + Math.random() * 35,
+          b: 220 + Math.random() * 35
         },
-        alpha: 0.3 + Math.random() * 0.7,
+        alpha: 0.2 + Math.random() * 0.6,
         waveOffset: Math.random() * Math.PI * 2
       });
     }
@@ -84,108 +86,112 @@ export default function ASCIIIntelligence() {
     const animate = () => {
       time += 0.016;
 
-      // Clear canvas with slight trail effect for flowing motion
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      // Clear canvas completely for crisp patterns
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
 
-      // Draw flowing intelligence patterns
-      patterns.forEach((pattern, index) => {
-        // Update phase for morphing effect
-        pattern.phase += pattern.speed;
-        
-        // Create flowing, organic movement
-        const wave1 = Math.sin(time * 0.8 + pattern.waveOffset) * 30;
-        const wave2 = Math.cos(time * 0.6 + pattern.phase) * 20;
-        const wave3 = Math.sin(time * 1.2 + index * 0.1) * 15;
-        
-        const flowX = pattern.x + wave1 + Math.sin(pattern.phase) * 40;
-        const flowY = pattern.y + wave2 + Math.cos(pattern.phase * 0.7) * 35;
-        
-        // Morphing character selection based on time
-        const charIndex = Math.floor((time * 2 + index) % intelligenceChars.length);
-        pattern.char = intelligenceChars[charIndex];
-        
-        // Dynamic sizing for breathing effect
-        const breathe = Math.sin(time * 3 + pattern.phase) * 0.3 + 1;
-        const dynamicSize = pattern.size * breathe;
-        
-        // Dynamic alpha for pulsing consciousness
-        const pulse = Math.sin(time * 4 + pattern.phase * 2) * 0.3 + 0.7;
-        const dynamicAlpha = pattern.alpha * pulse;
-        
-        // Gradient color shifting
-        const colorShift = Math.sin(time + pattern.phase) * 0.5 + 0.5;
-        const r = Math.floor(pattern.color.r + colorShift * 50);
-        const g = Math.floor(pattern.color.g + Math.sin(time * 2 + pattern.phase) * 40);
-        const b = Math.floor(pattern.color.b + Math.cos(time * 1.5 + pattern.phase) * 60);
-        
-        ctx.font = `${dynamicSize}px monospace`;
-        ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${dynamicAlpha})`;
-        ctx.textAlign = 'center';
-        ctx.fillText(pattern.char, flowX % canvas.width, flowY % canvas.height);
-        
-        // Add glow effect for enhanced intelligence feel
-        ctx.shadowColor = `rgb(${pattern.color.r}, ${pattern.color.g}, ${pattern.color.b})`;
-        ctx.shadowBlur = 10;
-        ctx.fillText(pattern.char, flowX % canvas.width, flowY % canvas.height);
-        ctx.shadowBlur = 0;
-        
-        // Wrap around screen edges
-        if (flowX > canvas.width + 50) pattern.x = -50;
-        if (flowX < -50) pattern.x = canvas.width + 50;
-        if (flowY > canvas.height + 50) pattern.y = -50;
-        if (flowY < -50) pattern.y = canvas.height + 50;
-      });
+      // Create intelligence matrix - grid-based morphing patterns
+      const gridSize = 8;
+      const matrixRows = Math.floor(canvas.height / (gridSize * 4));
+      const matrixCols = Math.floor(canvas.width / (gridSize * 3));
 
-      // Draw central intelligence core - spiraling consciousness
-      corePatterns.forEach((core, index) => {
-        core.angle += core.speed;
-        
-        // Spiraling outward and inward motion
-        const spiralRadius = core.radius + Math.sin(time + index * 0.5) * 30;
-        const spiralX = centerX + Math.cos(core.angle) * spiralRadius;
-        const spiralY = centerY + Math.sin(core.angle) * spiralRadius;
-        
-        // Morphing core characters
-        const coreCharIndex = Math.floor((time * 3 + index * 2) % intelligenceChars.length);
-        core.char = intelligenceChars[coreCharIndex];
-        
-        // Central intelligence glow
-        const coreGlow = Math.sin(time * 5 + index) * 0.4 + 0.8;
-        const coreBreathe = Math.sin(time * 2.5 + index * 0.3) * 0.5 + 1.2;
-        
-        ctx.font = `${core.size * coreBreathe}px monospace`;
-        ctx.fillStyle = `rgba(0, 255, 200, ${coreGlow})`;
-        ctx.shadowColor = 'rgba(0, 255, 200, 0.8)';
-        ctx.shadowBlur = 15;
-        ctx.textAlign = 'center';
-        ctx.fillText(core.char, spiralX, spiralY);
-        ctx.shadowBlur = 0;
-      });
+      for (let row = 0; row < matrixRows; row++) {
+        for (let col = 0; col < matrixCols; col++) {
+          const x = col * gridSize * 3 + gridSize;
+          const y = row * gridSize * 4 + gridSize * 2;
+          
+          // Wave-based character selection for intelligence flow
+          const waveIndex = Math.floor(
+            (Math.sin(time * 0.8 + col * 0.3) + 
+             Math.cos(time * 0.6 + row * 0.2) + 
+             Math.sin(time * 1.2 + (col + row) * 0.1) + 3) * 
+            (intelligenceChars.length / 6)
+          ) % intelligenceChars.length;
+          
+          const char = intelligenceChars[waveIndex];
+          
+          // Intensity based on distance from thought waves
+          const wave1 = Math.sin(time * 0.7 + col * 0.4 + row * 0.3);
+          const wave2 = Math.cos(time * 0.9 + col * 0.2 + row * 0.5);
+          const intensity = (wave1 + wave2 + 2) / 4;
+          
+          // Greyscale intensity mapping
+          const greyValue = Math.floor(180 + intensity * 75);
+          const alpha = 0.3 + intensity * 0.7;
+          
+          // Size variation for depth
+          const sizeVariation = 0.8 + intensity * 0.4;
+          const fontSize = Math.floor(12 * sizeVariation);
+          
+          ctx.font = `${fontSize}px monospace`;
+          ctx.fillStyle = `rgba(${greyValue}, ${greyValue}, ${greyValue}, ${alpha})`;
+          ctx.textAlign = 'center';
+          ctx.fillText(char, x, y);
+        }
+      }
 
-      // Draw connecting intelligence streams
-      ctx.strokeStyle = 'rgba(0, 212, 170, 0.3)';
-      ctx.lineWidth = 1;
-      for (let i = 0; i < corePatterns.length - 1; i++) {
-        const current = corePatterns[i];
-        const next = corePatterns[i + 1];
+      // Central consciousness emanation
+      const consciousnessLayers = 5;
+      for (let layer = 0; layer < consciousnessLayers; layer++) {
+        const layerRadius = 40 + layer * 25;
+        const layerSpeed = 0.3 + layer * 0.1;
+        const pointsInLayer = 8 + layer * 2;
         
-        const x1 = centerX + Math.cos(current.angle) * (current.radius + Math.sin(time + i * 0.5) * 30);
-        const y1 = centerY + Math.sin(current.angle) * (current.radius + Math.sin(time + i * 0.5) * 30);
-        const x2 = centerX + Math.cos(next.angle) * (next.radius + Math.sin(time + (i + 1) * 0.5) * 30);
-        const y2 = centerY + Math.sin(next.angle) * (next.radius + Math.sin(time + (i + 1) * 0.5) * 30);
+        for (let point = 0; point < pointsInLayer; point++) {
+          const angle = (point / pointsInLayer) * Math.PI * 2 + time * layerSpeed;
+          const radiusVariation = Math.sin(time * 2 + layer + point * 0.5) * 8;
+          const currentRadius = layerRadius + radiusVariation;
+          
+          const x = centerX + Math.cos(angle) * currentRadius;
+          const y = centerY + Math.sin(angle) * currentRadius;
+          
+          // Character morphing based on layer and time
+          const charIndex = Math.floor((time * 2 + layer * 3 + point) % intelligenceChars.length);
+          const char = intelligenceChars[charIndex];
+          
+          // Layer-based opacity and size
+          const layerAlpha = 0.8 - (layer * 0.15);
+          const layerSize = 16 - layer * 2;
+          const breathe = Math.sin(time * 3 + layer + point) * 0.2 + 1;
+          
+          ctx.font = `${Math.floor(layerSize * breathe)}px monospace`;
+          ctx.fillStyle = `rgba(255, 255, 255, ${layerAlpha})`;
+          ctx.textAlign = 'center';
+          ctx.fillText(char, x, y);
+        }
+      }
+
+      // Thought streams - vertical ascending patterns
+      const streamCount = 6;
+      for (let stream = 0; stream < streamCount; stream++) {
+        const streamX = (canvas.width / (streamCount + 1)) * (stream + 1);
+        const streamChars = 8;
         
-        // Flowing connection lines
-        const connectionAlpha = Math.sin(time * 3 + i) * 0.2 + 0.3;
-        ctx.strokeStyle = `rgba(0, 128, 255, ${connectionAlpha})`;
-        
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x2, y2);
-        ctx.stroke();
+        for (let charPos = 0; charPos < streamChars; charPos++) {
+          const baseY = canvas.height - 50;
+          const yOffset = (charPos * 30) + (time * 60) % (canvas.height + 100);
+          const y = baseY - yOffset;
+          
+          if (y > -50 && y < canvas.height + 50) {
+            const charIndex = Math.floor((time + stream * 2 + charPos) % intelligenceChars.length);
+            const char = intelligenceChars[charIndex];
+            
+            // Fade effect as characters ascend
+            const fadeAlpha = Math.max(0, Math.min(1, 
+              (canvas.height - Math.abs(y - canvas.height / 2)) / (canvas.height / 2)
+            )) * 0.6;
+            
+            const size = 11 + Math.sin(time * 2 + stream + charPos) * 2;
+            
+            ctx.font = `${size}px monospace`;
+            ctx.fillStyle = `rgba(200, 200, 200, ${fadeAlpha})`;
+            ctx.textAlign = 'center';
+            ctx.fillText(char, streamX, y);
+          }
+        }
       }
 
       animationIdRef.current = requestAnimationFrame(animate);
