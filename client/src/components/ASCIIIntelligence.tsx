@@ -86,9 +86,8 @@ export default function ASCIIIntelligence() {
     const animate = () => {
       time += 0.016;
 
-      // Clear canvas completely for crisp patterns
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Clear canvas with transparent background
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
