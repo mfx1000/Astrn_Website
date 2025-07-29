@@ -131,7 +131,7 @@ export default defineConfig({
   // root: __dirname,
   // root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve(__dirname, "public"),
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
   server: {
