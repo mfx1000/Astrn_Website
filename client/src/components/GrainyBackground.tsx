@@ -108,7 +108,7 @@ export default function GrainyBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-full h-full -z-10"
       style={{ 
         filter: 'contrast(1.1) brightness(0.9)',
         mixBlendMode: 'screen'
