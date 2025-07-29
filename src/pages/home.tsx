@@ -1,8 +1,8 @@
-import Navigation from "@/components/Navigation";
-import HeroSection from "@/components/HeroSection";
-import TechnologySection from "@/components/TechnologySection";
-import ApplicationsSection from "@/components/ApplicationsSection";
-import ContactSection from "@/components/ContactSection";
+import Navigation from "../components/Navigation";
+import HeroSection from "../components/HeroSection";
+import TechnologySection from "../components/TechnologySection";
+import ApplicationsSection from "../components/ApplicationsSection";
+import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   return (

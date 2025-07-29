@@ -1,4 +1,6 @@
-import { useToast } from "@/hooks/use-toast"
+// Update the import path if your use-toast hook is located elsewhere, for example:
+import { useToast } from "../../hooks/use-toast"
+// Or provide the correct relative path based on your project structure.
 import {
   Toast,
   ToastClose,
@@ -6,7 +8,7 @@ import {
   ToastProvider,
   ToastTitle,
   ToastViewport,
-} from "@/components/ui/toast"
+} from "./toast"
 
 export function Toaster() {
   const { toasts } = useToast()
