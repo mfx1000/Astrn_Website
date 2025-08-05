@@ -41,8 +41,9 @@ export default function HeroSection() {
                 muted
                 playsInline
               >
-                <source src="https://qxikapaxhmoiouxagyly.supabase.co/storage/v1/object/public/astrian-asset//robotics%20learning%20showcase.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+                <source src="https://qxikapaxhmoiouxagyly.supabase.co/storage/v1/object/public/astrian-asset//Astrian%20Website%20Demo%20v2.mp4" type="video/mp4" />
+                {/* <source src="https://qxikapaxhmoiouxagyly.supabase.co/storage/v1/object/public/astrian-asset//robotics%20learning%20showcase.mp4" type="video/mp4" /> */}
+                Astrian = Infinite training data for robotics and Physical AI.
               </video>
             </div>
           </div>
